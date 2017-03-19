@@ -5,7 +5,7 @@ body{
 		
 }
 
-#disPic, #tab{
+#tab{
 	width: 200px;
 	height: 240px;
 	margin: 100px 100px 100px 300px;
@@ -26,13 +26,16 @@ body{
 	background-color: rgba(128,128,128,0.2);
 	position: absolute;
 	left: 300px;
-	top: 10px;
+	top: 5px;
 }
+img{
+	text-align:center;
 
+}
 #tab{
 	position: absolute;
 	left: 50px;
-	top:120px;
+	top:-50px;
 	color: white;
 	font-family: 'Century Gothic';
 	
@@ -66,7 +69,7 @@ h3{
 	font-family: 'Footlight MT Light';
 	text-align: CENTER;
 }
-#edContent, #expContent, #semContent, #perContent, #hobContent, #favContent{
+#perContent{
 	position: relative;
 	left: 100px;
 }
@@ -78,6 +81,11 @@ a:hover{
 	color: blue;
 	font-family:  'Footlight MT Light';
 	font-size: 20px;
+}
+ol{
+	color: white;
+	font-family: 'Century Gothic';
+	
 }
 ul{
 	color: white;
