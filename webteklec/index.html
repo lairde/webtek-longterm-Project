@@ -163,10 +163,84 @@
 							 This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a <br>
 							 server, without implying a resource action or initiating resource retrieval.<p>
 							  <li>TRACE</li>
+							  <ol>
+								<li>Typically used for testing/diagnostics of the request chain	</li>
+							   <li>Request the server to “echo” back to the client the received request	</li>
+							  </ol>
 							  <li>PUT</li>
+							  <p>Request the server to store the enclosed entity in the message under the specified request URI<p>
 							  <li>DELETE</li>
+							  <p> Request the server to delete the resource identified by the request URI<p>
 							  <li>CONNECT</li>
+							  <p> Reserved for use of tunneling proxy servers<p>
+							  
 							 </ul>
+							<h3> Idempotent Methods</h3>
+							<ul>
+							<li>Generla Header Fields</li>
+							<ol>
+							<li>Cache-control</li>
+							<li>Connection</li>
+							<li>Data</li>
+							<li>Pragma</li>
+							<li>Trailer</li>
+							<li>Transfer-Encoding</li>
+							<li>Upgrade</li>
+							<li>Via</li>
+							<li>Warning</li>
+							</ol>
+							<li>Request Header Fields</li>
+								<ol>
+							<li>Accept</li>
+							<li>Accept-charset</li>
+							<li>Accept-encoding</li>
+							<li>Accept-Language</li>
+							<li>Accept-Authorizationtion</li>
+							<li>Authorizationtion</li>
+							<li>Expect</li>
+							<li>From</li>
+							<li>Host</li>
+							<li>If-Match</li>
+							<li>If-Modified</li>
+							<li>If-None-Match</li>
+							<li>If-Range</li>
+							<li>If-Unmodified-Since</li>
+							<li>Max-Forward</li>
+							<li>Proxy-Authorizationtion</li>
+							<li>Range</li>
+							<li>Referrer</li>
+							<li>User-Agent</li>
+							</ol>
+							<li>Response Header Fields</li>
+							<ol>
+							<li>Accept-Range</li>
+							<li>Age</li>
+							<li>E-tag</li>
+							<li>Location</li>
+							<li>Proxy-Authenticate</li>
+							<li>Retry-After</li>
+							<li>Server</li>
+							<li>Vary</li>
+							<li>WWW-Aunthenticate</li>
+							</ol>
+							<li>Entity Header Fields</li>
+							<ol>
+							<li>Allow</li>
+							<li>Content-Encoding</li>
+							<li>Content-language</li>
+							<li>Content-length</li>
+							<li>Content-location</li>
+							<li>Content-MD5</li>
+							<li>Content-range</li>
+							<li>Content-type</li>
+							<li>Expires</li>
+							<li>Last Modified</li>
+							
+							</ol>
+							
+							<h3>Status Codes</h3>
+							
+							</ul>
 							 
 					</div>
 
