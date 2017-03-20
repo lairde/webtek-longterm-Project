@@ -26,17 +26,17 @@
                         
                            <ul>
 						   <li>A global system of interconnected computer networks that <br>
-						   use the standard Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</li><br>
+						   use the standard Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.<br></li>
 						   <li>is a network of networks that consists of millions of private, public, academic, business,<br> and government networks, of local to global scope, that are linked by a broad array of <br> electronic,
-						   wireless and optical networking technologies.</li><br>
+						   wireless and optical networking technologies.<br></li>
 						  
 						   </ul><br>
 						   
 						  
 						<h3>Vinton Cerf</h3>
 						   <ul>
-						   <div id= image><img src="images/cerf.jpg" alt=""></div>
-						   <li>Father of internet</li>
+						   
+						   <li><div id = image><img src="images/cerf.jpg" alt=""><br></div>Father of internet</li>
 							</ul><br><br>
                            
 						   
@@ -54,9 +54,9 @@
   
 						   <h3>Tim Berners Lee</h3>
 						   <ul>
-						    <div id = image><img src="images/lee.jpg" alt=""></div> 
-						   <li>Father of web</li>
-							</ul><br><br>
+						    
+						   <li><div id = img1><img src="images/lee.jpg" alt=""></div><br>Father of web</li>
+							</ul>
                         
 						<h3>HTTP</h3>
 						   <ul>
@@ -64,7 +64,7 @@
 						   <li>Application layer used primarily to retrieve hypertext (on hypermedia) documents and resources on the World Wide Web</li>
 						     <li>Jointly developed by the W3C and the IETF</li>
 						   
-							</ul><br><br>
+							</ul>
 								<h3>Protocol</h3>
 						   <ul>
 						     
@@ -72,113 +72,114 @@
 						     <li>Set of rules need to be followed</li>
 
 							 
-							</ul><br><br>
+							</ul><br>
 							<h3>Fundamentals</h3>
 							<ul>
 						     <li>HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS).</li>
                     
 						     <li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
-							 <ol>
+							 
 							 <li>Scheme (http: or https:)</li>
-							  <li>(optional) authentication information</li>
-							   <li>Host and (optional) port number</li>
-							    <li>Path (resolved to the document root on the server) to the resource</li>
-								 <li>(optional) scheme-specific parameters</li>
-								 <li>(optional) URL-encoded query</li>
-								 <li>(optional) bookmark (or fragment identifier</li>
-							 </ol><br>
+							  <li><ol>
+							  <li>-(optional) authentication information</li>							  
+							  <li>-post and (optional) port number</li>
+							    <li>-Path (resolved to the document root on the server) to the resource</li>
+								 <li>-(optional) scheme-specific parameters</li>
+								 <li>-(optional) URL-encoded query</li>
+								 <li>-(optional) bookmark (or fragment identifier</li>
+							 </ol></li>
 								<li>HTTP is based on client-server architecture</li>
 								<li>Clients, aka user agents (UA):</li>
-								<ol>
+								
 							 <li>Scheme (http: or https:)</li>
 							  <li>Web browsers,</li>
 							   <li>web crawlers</li>
 							    <li>email clients</li>
-								 <li>other end user tools and applications</li>
+								 <li>other end user tools and applications <br></li>
 								
-							 </ol><br>
+							
 								<li>Servers:</li>
-								<ol>
+								<li><ol>
 							 <li>Origin servers</li>
 							  <li>proxy servers,</li>
 							   <li>gateways</li>
 							    <li>tunnels</li>
-								  </ol><br>
+								 </ol><br> </li>
 								
 								<li>HTTP uses a request-response standard protocol</li>
-								<ol>
+								<li><ol>
 								<li>The client sends an HTTP request message to the server </li>
 								<li>The server processes the request and replies with an HTTP response message </li>
 								
-								</ol>
+								</ol></li>
 								<li>HTTP is a stateless communications protocol</li>
-								<ol>
+								<li><ol>
 								<li>Servers do not keep information about clients in between requests </li>
 								<li>Web applications effect session tracking using mechanism such as cookies on URL-encoded session information to keep track of related client
 								requests</li>
 								
-								</ol>
+								</ol></li>
 								<li>HTTP provides support for other functionalities such as cache control, content media type (MIME) specification, language and character set specification, <br>
-								content/transfer coding, client-server protocol negotiations, persistent connections, request pipelining, etc.</li>
-							 </ul><br><br>
+								content/transfer coding, client-server protocol negotiations, persistent connections, request pipelining, etc.<br><br></li>
+							 </ul>
 							 
 							 <h3>Cookie</h3>
 							 <ul>
 							 <li> very small text file</li>
-							 </ul><br><br>
+							 </ul>
 							  <h3>Cache</h3>
-							 <ul><br><br>
+							 <ul>
 							 <li>Local storage/copy of resource that is fetched from a server</li>
-							 </ul><br><br>
-							 <h3>HTTP Response Message</h3>
+							 </ul>
+							 <h3><br><br>HTTP Response Message</h3>
 							 <ul>
 							 <li> Status line</li>
-							 <ol>
+							 <li><ol>
 								<li> HTTP protocol version </li>
 								<li> Status code</li>
 								<li>Reason phrase </li>								
-							 </ol>
+							 </ol></li>
 							 <li>Response headers </li>
 							 <li>Empty line </li>
-							 <li>Message body</li>
-							 </ul><br>
+							 <li>Message body<br></li>
+							 </ul>
 							 
 							 
 							 <h3>HTTP Request Methods</h3>
 							 <ul>
 							 <li> GET</li>
-							 <ol>
+							 <li><ol>
 								<li> Most commonly used HTTP method </li>
 								<li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved 
 								resource is returned in the message body as an entity.</li>
 								<li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval</li>		
 								<li>Must be supported by all general-purpose servers. </li>									
-							 </ol>
-							 <li>HEAD </li>
-							  <p> Identical to GET, except the message body is not included in the response<p>
+							 </ol><br></li>
+							 <li>HEAD <br><p> Identical to GET, except the message body is not included in the response<p></li>
+							  
 							 <li>POST </li>
-									 <p> Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.<p>
-							 <li>OPTION</li>
-							 <p>Request for information about the communication options available on the request/response chain identified by the Request-URI.<br> 
+									 <li><p> Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</p>
+							 <li>OPTION<br><p>Request for information about the communication options available on the request/response chain identified by the Request-URI.<br> 
 							 This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a <br>
-							 server, without implying a resource action or initiating resource retrieval.<p>
+							 server, without implying a resource action or initiating resource retrieval.</p></li>
+							 
 							  <li>TRACE</li>
-							  <ol>
+							  <li><ol>
 								<li>Typically used for testing/diagnostics of the request chain	</li>
 							   <li>Request the server to “echo” back to the client the received request	</li>
-							  </ol>
-							  <li>PUT</li>
-							  <p>Request the server to store the enclosed entity in the message under the specified request URI<p>
-							  <li>DELETE</li>
-							  <p> Request the server to delete the resource identified by the request URI<p>
-							  <li>CONNECT</li>
-							  <p> Reserved for use of tunneling proxy servers<p>
+							  </ol></li>
+							  <li>PUT<br><p>Request the server to store the enclosed entity in the message under the specified request URI</p></li>
 							  
-							 </ul><br><br>
+							  <li>DELETE<br> <p> Request the server to delete the resource identified by the request URI</p></li>
+							 
+							  <li>CONNECT<br><p> Reserved for use of tunneling proxy servers</p><br><br></li>
+							  
+							  
+							 </ul>
 							<h3> Idempotent Methods</h3>
 							<ul>
 							<li>Generla Header Fields</li>
-							<ol>
+							<li><ol>
 							<li>Cache-control</li>
 							<li>Connection</li>
 							<li>Data</li>
@@ -188,9 +189,9 @@
 							<li>Upgrade</li>
 							<li>Via</li>
 							<li>Warning</li>
-							</ol>
+							</ol></li>
 							<li>Request Header Fields</li>
-								<ol>
+								<li><ol>
 							<li>Accept</li>
 							<li>Accept-charset</li>
 							<li>Accept-encoding</li>
@@ -210,9 +211,9 @@
 							<li>Range</li>
 							<li>Referrer</li>
 							<li>User-Agent</li>
-							</ol>
+							</ol></li>
 							<li>Response Header Fields</li>
-							<ol>
+							<li><ol>
 							<li>Accept-Range</li>
 							<li>Age</li>
 							<li>E-tag</li>
@@ -222,9 +223,9 @@
 							<li>Server</li>
 							<li>Vary</li>
 							<li>WWW-Aunthenticate</li>
-							</ol>
+							</ol></li>
 							<li>Entity Header Fields</li>
-							<ol>
+							<li><ol>
 							<li>Allow</li>
 							<li>Content-Encoding</li>
 							<li>Content-language</li>
@@ -236,25 +237,26 @@
 							<li>Expires</li>
 							<li>Last Modified</li>
 							
-							</ol>
-							
+							</ol></li>
+							</ul>
 							<h3>Status Codes</h3>
-							<li>Informational</li><br>
-							<ol>
+						<ul>	
+							<li>Informational<br></li>
+							<li><ol>
 							<li>100 Continue</li>
 							<li>101 Switching Protocols</li>
-							</ol><br>
+						</ol><br></li>
 							<li>Success</li>
-							<ol>
+							<li><ol>
 							<li>200 OK</li>
 							<li>202 Accepted</li>
 							<li>203 Non-Authoritative Information</li>
 							<li>204 No Content</li>
 							<li>205 Reset Content</li>
 							<li>206 Partial Content</li>
-							</ol><br>
-							<li>Redirection </li><br>
-							<ol>
+							</ol><br></li>
+							<li>Redirection<br> </li>
+							<li><ol>
 							<li>300 Multiple Choices</li>
 							<li>301 Moved Permanently</li>
 							<li>302 Found</li>
@@ -262,9 +264,9 @@
 							<li>304 Not Modified</li>
 							<li>305 Use Proxy</li>
 							<li>307 Temporary Redirect</li>
-							</ol><br>
-							<li>Client Error </li><br>
-							<ol>
+							</ol><br></li>
+							<li>Client Error<br> </li>
+							<li><ol>
 							<li>400 Bad Request</li>
 							<li>401 Unauthorized</li>
 							<li>402 Payment Required</li>
@@ -283,16 +285,16 @@
 							<li>415 Unsupported Media Type</li>
 							<li>416 Request Range Not Satisfiable</li>
 							<li>417 Expectation Failed</li>
-							</ol><br>
-							<li>Server Error </li><br>
-							<ol>
+							</ol><br></li>
+							<li>Server Error<br> </li>
+							<li><ol>
 							<li>500 Internal Server Error</li>
 							<li>501 Not Implemented</li>
 							<li>502 Bad Gateway</li>
 							<li>503 Service Unavailable</li>
 							<li>504 Gateway Timeout</li>
 							<li>505 HTTP Version Not Supported</li>
-							</ol><br>
+							</ol><br></li>
 							</ul>
 							 
 					</div>
