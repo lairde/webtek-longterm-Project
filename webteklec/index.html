@@ -78,7 +78,6 @@
 						     <li>HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS).</li>
                     
 						     <li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
-							 </ul>
 							 <ol>
 							 <li>Scheme (http: or https:)</li>
 							  <li>(optional) authentication information</li>
@@ -88,7 +87,86 @@
 								 <li>(optional) URL-encoded query</li>
 								 <li>(optional) bookmark (or fragment identifier</li>
 							 </ol><br>
+								<li>HTTP is based on client-server architecture</li>
+								<li>Clients, aka user agents (UA):</li>
+								<ol>
+							 <li>Scheme (http: or https:)</li>
+							  <li>Web browsers,</li>
+							   <li>web crawlers</li>
+							    <li>email clients</li>
+								 <li>other end user tools and applications</li>
+								
+							 </ol><br>
+								<li>Servers:</li>
+								<ol>
+							 <li>Origin servers</li>
+							  <li>proxy servers,</li>
+							   <li>gateways</li>
+							    <li>tunnels</li>
+								  </ol><br>
+								
+								<li>HTTP uses a request-response standard protocol</li>
+								<ol>
+								<li>The client sends an HTTP request message to the server </li>
+								<li>The server processes the request and replies with an HTTP response message </li>
+								
+								</ol>
+								<li>HTTP is a stateless communications protocol</li>
+								<ol>
+								<li>Servers do not keep information about clients in between requests </li>
+								<li>Web applications effect session tracking using mechanism such as cookies on URL-encoded session information to keep track of related client
+								requests</li>
+								
+								</ol>
+								<li>HTTP provides support for other functionalities such as cache control, content media type (MIME) specification, language and character set specification, <br>
+								content/transfer coding, client-server protocol negotiations, persistent connections, request pipelining, etc.</li>
+							 </ul>
 							 
+							 <h3>Cookie</h3>
+							 <ul>
+							 <li> very small text file</li>
+							 </ul>
+							  <h3>Cache</h3>
+							 <ul>
+							 <li>Local storage/copy of resource that is fetched from a server</li>
+							 </ul>
+							 <h3>HTTP Response Message</h3>
+							 <ul>
+							 <li> Status line</li>
+							 <ol>
+								<li> HTTP protocol version </li>
+								<li> Status code</li>
+								<li>Reason phrase </li>								
+							 </ol>
+							 <li>Response headers </li>
+							 <li>Empty line </li>
+							 <li>Message body</li>
+							 </ul><br>
+							 
+							 
+							 <h3>HTTP Request Methods</h3>
+							 <ul>
+							 <li> GET</li>
+							 <ol>
+								<li> Most commonly used HTTP method </li>
+								<li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved 
+								resource is returned in the message body as an entity.</li>
+								<li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval</li>		
+								<li>Must be supported by all general-purpose servers. </li>									
+							 </ol>
+							 <li>HEAD </li>
+							  <p> Identical to GET, except the message body is not included in the response<p>
+							 <li>POST </li>
+									 <p> Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.<p>
+							 <li>OPTION</li>
+							 <p>Request for information about the communication options available on the request/response chain identified by the Request-URI.<br> 
+							 This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a <br>
+							 server, without implying a resource action or initiating resource retrieval.<p>
+							  <li>TRACE</li>
+							  <li>PUT</li>
+							  <li>DELETE</li>
+							  <li>CONNECT</li>
+							 </ul>
 							 
 					</div>
 
