@@ -1,14 +1,16 @@
 body{
-		background-image: url("background.jpg");
+		background-image: url("background3.jpg");
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		
 }
-
+#image{
+	text-align:center;
+}
 #tab{
 	width: 200px;
 	height: 240px;
-	margin: 100px 100px 100px 300px;
+	margin: 100px 100px 100px 30px;
 	padding-top: 3px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -18,7 +20,7 @@ body{
 
 #content{
 	width: 800px;
-	margin: 50px 150px 100px 300px;
+	margin: 50px 150px 100px 30px;
 	padding-top: 3px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -28,10 +30,8 @@ body{
 	left: 300px;
 	top: 5px;
 }
-img{
-	text-align:center;
 
-}
+
 #tab{
 	position: absolute;
 	left: 50px;
