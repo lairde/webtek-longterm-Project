@@ -1,38 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
 
-                <!DOCTYPE html>
+    <head>
+         <title> LVB </title>
+            <link rel="stylesheet" type="text/css" href="styles/Styles.css">
+    </head>
+	<body>
+	<div>
+		<h2> Web Tech </h2>
+	</div>
+	
+	<div id="tab">
+         <nav>
+            <a href="index.html">Prelim</a>
+            <a href="midterm.html">Midterm</a>
+            <a href="finals.html">Finals</a>
+         </nav>
+      </div>
 
-                <html lang="en">
+	<div id="content">
+      <div>
+      <ul>
+      <h3>Servlets</h3>
 
-                <head>
-                    <title> LVB </title>
-                    <link rel="stylesheet" type="text/css" href="styles/Styles.css">
-                </head>
+        <li>Java Object based on the Servlet API</li>
 
-                <body>
-                    
-                    <div id="tab">
+        <li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most commonly used with HTTP and the term „servlet? is often used in the context of an “HTTP Servlet”.</li>
 
-                        <nav>
+        <li>Web-tier components in the Java EE architecture.</li>
 
-                           <a href="index.html">Prelim</a>
-							<a href="midterm.html">Midterm</a>
-							<a href="finals.html">Finals</a>
-							
+        <li>Runs in, and is managed by, a web-tier container called the „Servlet Container?</li>
 
-                        </nav>
-                    </div>
-                    <div id="content">
-                        <h3>Internet </h3>
-                        <div id="perContent">
-                            
-                        </div>
+        <li>Mapped to URLs to which clients send requests</li>
 
-                        <br>
-                        <br>
-                    </div>
+        <li>Typically asked with (among other things)
+        Processing and/or storing data submitted vial HTML forms
+        Generating dynamic content</li>
+        </ul>
 
-                </body>
+        <ul>
+        <li>javax.servlet</li>
+        <ul>
+        <li>Servlet, GenericServlet</li>
+        <li>ServletRequest, ServletResponse</li>
+        <li>ServletConfig, ServletContext</li>
+        <li>RequestDispatcher</li>
+        </ul>
+        </ul>
 
-                </html>
+        <ul>
+        <li>javax.servlet.http</li>
+        <ul>
+        <li>HttpServlet</li>
+        <li>HttpServletRequest</li>
+        <li>HttpServletResponse</li>
+        <li>HttpSession</li>
+        <li>Cookie</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Servlet Processing</li>
+        <ul>
+        <li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container</li>
+        <li>Servlet container checks if servlet is already loaded</li>
+        <li>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</li>
+        <li>Servlet container invokes the servlet‟s service method, passing request and response objects as arguments</li>
+        <li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the web server, which in turn sends the response to the client</li>
+        <li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>init(config)</li>
+        <ul>
+        <li>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup initialization</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>service(request, response)</li>
+        <ul>
+        <li>Invoked each time the servlet is called upon to process a request (typically on a separate thread for each call)</li>
+        <li>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g. doGet, doPost) which is typically overridden to affect the servlet‟s functionality</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Destroy()</li>
+        <ul>
+        <li>Invoked on the servlet by the servlet container when the servlet is to be unloaded (e.g. when the application is stopped or undeployed); can be used by the servlet for clean-up processing (e.g. resource deallocation)</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Servlet Request Processing (HttpServletRequest)</li>
+        <ul>
+        <li>Retrieving user-supplied request parameters</li>
+        <li>Retrieving request header values</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Servlet Response Processing (HttpServletResponse)</li>
+        <ul>
+        <li>Setting response status code</li>
+        <li>Setting response headers</li>
+        <li>Obtaining output object for sending the response</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Servlet Request Dispatching (RequestDispatcher)</li>
+        <ul>
+        <li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li>
+        <p>RequestDispatcher rqstDsp;
+        rqstDsp = request.getRequestDispatcher(res);</p>
+        <li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included (e.g. use for banners, footers, etc.)</li>
+        <p>rqstDsp.include(request, response);</p>
+        <li>Forwards the processing of the current request to the dispatcher resource; the servlet processing the current request must not generate a response ( e.g. use in MVC “controller” servlets)</li>
+        <p>rqstDsp.forward(request, response);</p>
+        </ul>
+        </ul>
+
+        <ul>
+        <li>Session Tracking(HttpSession)</li>
+        <ul>
+        <li>Session tracking support is implemented either cookies or URL-rewriting</li>
+        <li>Obtaining session object from the current request</li>
+        <p>HttpSession session;
+		session = request.getSession(createNew);</p>
+        <li>Obtaining session information (HttpSession)</li>
+        <ul>
+        <li>getCreationTime(), getLastAccessedTime(), getMaxInactiveInternal(), getId(), isNew(), setMaxInactiveInterval(int val)</li>
+        </ul>
+        <li>destroying sessions</li>
+        <ul>
+        <li>invalidate()</li>
+        </ul>
+        <li>URL-rewriting(HttpServletResponse)</li>
+        <ul>
+        <li>encodeURL(String url), encodeRedirectURL(String url)</li>
+        </ul>
+        </ul>
+        </ul>
+
+        <ul>
+        <h3>Web Context (ServletContext)</h3>
+        <ul>
+        <li>a web application is associated with a context, which is an object that provides methods that servlets use to communicate with the servlet container</li>
+        <li>obtaining the servlet context (HttpServlet)</li>
+      	<p>ServletContext context;
+		context = this.getServletContext();</p>
+		<li>obtaining context information (ServletContext)</li>
+		<ul>
+		<li>getServerInfo(), getContextPath(), getRealPath(), getResource(), getResourceAsStream(), getMimeType, getInitParameter(), getInitParameterNames(), getRequestDispatcher(), getContext()</li>
+		</ul>
+        </ul>
+        </ul>
+
+        <ul>
+        <h3>Servlet Configuration (ServletConfig)</h3>
+        <li>getServletName(), getServletContext(), getInitParameter(), getInitParameterNames()</li>
+        </ul>
+
+        <ul>
+        <h3>Information sharing using scope objects</h3>
+        <li>A request may be processed by several web application components (e.g. through calls to RequestDispatcher forwad/include) and there may be a need for one component to communicate information to the other components in the request processing chain.</li>
+        <li>A client session typically consists of multiple requests, which due to the stateless nature of HTTP, will appear to the application as being “unrelated” to one another; the HttpSession object can be used to “relate” these requests together, but there may still be a need to share information created in one request with a subsequent request</li>
+        <li>Different web application components may require access to common resources or information (e.g. page counters, shared database connection).</li>
+        <li>Information sharing is accomplished by creating attribute objects and exposing these objects in the appropriate scope.</li>
+        <li>Scopes:</li>
+        <ul>
+        <li>Request scope (HttpServletRequest)</li>
+        <li>Session scope (HttpSession)</li>
+        <li>Web Application or Web Context scope (ServletContext)</li>
+        <li>Page scope (local objects in a servlet)</li>
+        </ul>
+        <li>Creating, accessing, and removing attribute objects</li>
+        <ul>
+        <li>setAttribute (String attrName, Object attrValue)</li>
+        <li>getAttribute (String attrName)</li>
+        <li>getAttributeNames()</li>
+        <li>removeAttribute (String attrName)</li>
+        </ul>
+        </ul>
+
+        <ul>
+        <h3>Advanced Servlet Topics</h3>
+        <h2>Listeners</h2>
+        <li>java objects used to “subscribe” to application “events” in order to be “notified” when these events occur</li>
+        <ul>
+        	<li>context-related events</li>
+        	<ul>
+        		<li>context initialized, context destroyed, context attribute changes</li>
+        	</ul>
+        	<li>session-related events</li>
+        	<ul>
+        		<li>session created, session destroyed, session attribute changes</li>
+        	</ul>
+        	<li>request-related events</li>
+        	<ul>
+        		<li>request initialized, request destroyed, request attribute changes</li>
+        	</ul>
+        </ul>
+        </ul>
+
+        <ul>
+        	<li>javax.servlet</li>
+        	<ul>
+        	<li>ServletContextListener, ServletContextAttributelistener</li>
+        	<li>ServletRequestListener, ServletRequestAttributeListener</li>
+        </ul>
+        </ul>
+        
+
+        <ul>
+        	<li>javax.servlet.http</li>
+        	<ul>
+        	<li>HttpSessionListener, HttpSessionAttributeListener</li>
+        </ul>
+        </ul>
+
+        <ul>
+        	<h3>Filters</h3>
+        	<li>Java objects used to intercept incoming requests and outgoing responses in order to perform various tasks such as:</li>
+        	<ul>
+        		<li>Authentication and access control</li>
+        		<li>Logging, auditing</li>
+        		<li>Caching, data compression</li>
+        		<li>Content Transformation</li>
+        	</ul>
+        	<li>Filter objects are mapped to the URL patterns they are intended to intercept</li>
+        	<li>Filter objects can be “chained” together</li>
+        </ul>
+
+        <ul>
+        	<h3>javax.servlet</h3>
+        	<li>Filter, FilterChain, FilterConfig</li>
+        </ul>
+
+        <ul>
+        	<h3>Java Server Pages</h3>
+        	<li>Simply an HTML web page that contains additional bits of code that execute application logic to generate dynamic content.</li>
+        	<li>Java Server Pages Actions (JSP tags) perform a variety of functions and extend the capabilities of JSP.</li>
+        	<li>Java Server Pages Actions use XML-like syntax, and are used to manage JavaBeans component.</li>
+        	<li>Directives are instructions that are processed by the JSP engine when the page is compiled to a servlet.</li>
+        	<li>Directives are used to set page-level instructions, insert data from external files, and specify custom tag libraries</li>
+        	<li>Motivation</li>
+        	<ul>
+        		<li>It is typically a good idea to separate business logic from presentation concern</li>
+        		<ul>
+        			<li>Allows modern web development teams to be divided up into programmers and web page authors / designers</li>
+        			<li>Fosters component reuse (e.g. the same data object can be consumed by user agents of varying capabilities and needs)</li>
+        		</ul>
+        		<li>Servlets can be very powerful for programming business logic, but are very awkward to use when generating static (i.e. template) content.</li>
+        		<li>(X)HTML marked-up documents are very convenient for static content generation but cannot be used to program business logic (or generate dynamic content arising from data produced by the business logic).</li>
+        	</ul>
+        	<li>Features</li>
+        	<ul>
+        		<li>Text-based document capable of generating both static and dynamic content (typically intermixed)</li>
+        		<li>Mark-up based document syntax (JSP-style or XML-style), combining (X) HTML elements as well as standard and custom JSP elements; thus, web page authors can feel right “at home” with the mark-up syntax.</li>
+        		<li>Embedded Java Coding support via “scriptlets”</li>
+        		<li>Template text are converted into JSPWriter</li>
+        	</ul>
+        	<li>Components</li>
+        	<li>Template (i.e. static) text</li>
+        	<li>JSP elements</li>
+        	<ul>
+        		<li>Directives</li>
+        		<ul>
+        			<li><%@ page ContentType=”text/html” pageEncoding=”UTF-8” %></li>
+        			<li><%@ page import=”java.util.Random” %></li>
+        			<ul>
+        				<li>autoFlush</li>
+        				<li>buffer</li>
+        				<li>contentType</li>
+        				<li>errorPage</li>
+        				<li>extends</li>
+        				<li>import</li>
+        				<li>info</li>
+        				<li>isELIgnored</li>
+        				<li>isErrorPage</li>
+        				<li>isThreadSafe</li>
+        				<li>language</li>
+        				<li>pageEncoding</li>
+        				<li>session</li>
+        			</ul>
+        			<li><%@ taglib uri=”http://java.sun.com/jsp/jstl/core” prefix=”c” %></li>
+        			<ul>
+        				<li>prefix</li>
+        				<li>taglib</li>
+        				<li>uri</li>
+        			</ul>
+        		</ul>
+        		<li>Scripting Elements</li>
+        		<ul>
+        			<li>Declarations</li>
+        			<li>Expressions</li>
+        			<li>Scriptlets</li>
+        		</ul>
+        		<li>Actions</li>
+        		<ul>
+        		<li>Custom Actions (JSTL)</li>
+        		<ul>
+        			<li>JSTL, user-written custom tag libraries</li>
+        		</ul>
+        		<li>Expression Language (EL)</li>
+        		<li>Implicit Scripting Objects</li>
+        		<ul>
+        			<li>request, response, out, pageContext</li>
+        			<li>session, pageContext, application</li>
+        			<li>config, page, exception</li>
+        		</ul>
+        		<li>Implicit EL Objects</li>
+        		<ul>
+        			<li>pageContext</li>
+        			<li>pageScope</li>
+        			<li>requestScope</li>
+        			<li>sessionScope</li>
+        			<li>applicationScope</li>
+        			<li>param, paramValues</li>
+        			<li>header, headervalues</li>
+        			<li>cookie</li>
+        			<li>initparam</li>
+        		</ul>
+        		</ul>
+
+        	</ul>
+        	<ul>
+        		<h3>Servlets or JSPs?</h3>
+        		<li>The common practice is to leverage both technologies to implement the MVC design pattern</li>
+        	</ul>
+        	<ul>
+        		<h3>Model-View-Controller (MVC) Design Pattern</h3>
+        		<li>Model </li>
+        		<li>View</li>
+        		<li>Controller</li>
+        	</ul>
+        	<ul>
+        		<h3>A sample web MVC framework can use</h3>
+        		<li>JavaBeans for the model</li>
+        		<li>JSPs for the View</li>
+        		<li>Servlets for the controller</li>
+        	</ul>
+        	<ul>
+        		<h3>JSP Standard Tag Library (JSTL)</h3>
+        		<li>Set of custom JSP elements that provide various programmatic functionality via markup syntax</li>
+        		<ul>
+        			<li>Core Tag Library</li>
+        			<li>SQL Tag Library</li>
+        			<li>Internationalization Tag Library</li>
+        			<li>XML</li>
+        			<li>JSTL Function</li>
+        		</ul>
+        		<li>In addition to the JSTL, developers can also create their own tag libraries for commonly occurring tasks</li>
+        	</ul>
+        	<ul>
+        		<h3>10 OWASP Security Issues</h3>
+        		<p> OWASP (Open Web Application Security Project) is an organization that provides unbiased and practical, cost-effective information about computer and Internet applications.</p>
+        		<li>A1 Injection</li>
+        		<li>A2 Broken Authentication and Session Management</li>
+        		<li>A3 Cross-Site Scripting (XSS)</li>
+        		<li>A4 Broken Access Control (As it was in 2004)</li>
+        		<li>A5 Security Misconfiguration</li>
+        		<li>A6 Sensitive Data Exposure</li>
+        		<li>A7 Insufficient Attack Protection (NEW)</li>
+        		<li>A8 Cross-Site Request Forgery (CSRF)</li>
+        		<li>A9 Using Components with Known Vulnerabilities</li>
+        		<li>A10 Underprotected APIs (NEW)</li>
+        	</ul>
+        </ul>
+
+
+
+      </div>
+    </div>
+                   
+
+	</body>
+</html>
                  
     
