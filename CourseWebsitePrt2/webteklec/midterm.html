@@ -1,0 +1,395 @@
+
+                <!DOCTYPE html>
+
+                <html lang="en">
+
+                <head>
+                    <title> LVB </title>
+                    <link rel="stylesheet" type="text/css" href="styles/Styles.css">
+                </head>
+
+                <body>
+                    
+                    <div id="tab">
+
+                        <nav>
+
+                           <a href="index.html">Prelim</a>
+							<a href="midterm.html">Midterm</a>
+							<a href="finals.html">Finals</a>
+							
+
+                        </nav>
+                    </div>
+                    <div id="content">
+                       
+			<h3>Extensible Hypertext Markup Language</h3>
+         <ul>
+            <li>
+			Reformulation of HTML in XML<br>
+            </li>
+            
+			<li>
+			Versions<br>
+            </li>
+			</ul>
+			<p>
+			oXHTML 1.0s<br>
+			o XHTML 1.1s<br>
+			o XHTML 1.2s<br>
+			o XHTML 2.0s<br>
+			o XHTML 5 (working draft)	</p>
+
+<ul>
+<li>Basic differences between HTML and XHTML </li>
+</ul>
+<p>
+	o All elements have beginning and ending tags<br>
+	o All elements are nested properly<br>
+	o Elements and attribute names are case sensitive (lowercase)<br>
+	o Attribute values are quoted)<br>
+	o Attribute values cannot be minimized	</p>
+				
+				<ul>
+				<li>XHTML Doc. Components</li>
+					
+					
+					<ul>
+					<li>Document Type Declaration (DOCTYPES)</li>
+					<li> <ul>
+							<li>HTML 4.01 DOCTYPES</li>
+							<li> XHTML 1.0 DOCTYPES</li>
+							
+						</ul></li>
+					<li>Elements</li>
+					
+					<li> <ul>
+							<li>Tags</li>
+							<li> Content (elements)</li>
+							<li> Attributes</li>
+							
+							<li> XHTML 1.0 DOCTYPES</li>
+							
+					</ul></li>
+					
+					</ul>
+					
+					
+					<li/>
+				
+				
+				</ul>   
+				
+				<h3>Client-side web scripting</h3>
+				<ul>
+				<li>Allows programs (i.e. scripts) to be downloaded from a web server and executed in the client environment (e.g. browser)</li>
+				<li>Common client-side scripting technologies</li>
+				<li><ul>
+				<li>JavaScript, ECMAScript, Jscript</li>
+				<li>VBScript, ActionScript</li>
+				<li> Java Applets, ActiveX Controls, Flash Animations, Microsoft Silverlight, Adobe Integrated Runtime (Adobe AIR </li>
+				</ul></li>
+					
+				<li>Common uses:</li>
+				
+				<li><ul>
+				<li>Browser support</li>
+				<li><br> <ul>	<li>No scripting support</li><br>
+							<li>Scripting disabled</li><br>
+						<li>Plugin availability</li><br>
+						
+						</ul>
+				<li>Version incompatibilities, non-standard implementations</li>
+				<li> Capabilities restrictions </li>
+				
+				<li>
+					<ul> 
+					<li>Scripting languages are not for general-purpose programming</li>
+					<li>E.g. javascript is restricted by the sandbox execution model and the same origin policy</li>
+						
+				
+					</ul>
+				</ul></li>
+				<li>Security risks</li>
+				<li>
+					<ul>
+					<li>Browser implementation defects (e.g. buffer overflows)</li>
+					<li>E.g. javascript, cross-site scripting (XSS) or cross-site request forgery (XSRF) issues</li>
+					<li>Malicious ActiveX controls</li>
+					
+					
+					</ul>
+				
+				
+				</li>
+				
+				</ul>
+					   
+					   
+					   <h3>JavaScript</h3>
+						<ul>
+						<li>
+						Developed circa 1995 by Brendan Eich at Netscape Communications as the scripting language for the Netscape Navigator Browser
+						</li>
+						<li>
+						Formerly called Mocha, then LiveScript, then JavaScript
+						</li>
+						<li>
+						Standardized by ECMA International as ECMAScript
+						</li>
+						<li>
+						Latest version: JavaScipt 1.8.1, ECMAScript 5 [ECMA-262 5th Edition]
+						</li>
+						<li>
+						Common version: JavaScript 1.5, Jscript 5.5, ECMAScript v3 [ECMA-262 3rd Edition]
+						</li>
+						<li>
+						JavaScript Frameworks:
+							<ul><li>
+							script.aculo.us, jQuery, MooTools, Prototype, Dojo Toolkit, etc
+							</li></ul>
+						</li>
+						<li>
+						Linked/Embedded in web pages using the script element
+							<ul><li>
+							Linked
+							</li>
+							
+								
+								
+							<li>Embedded (either in the <head> or the < body> element)</li><br>
+							<li>JavaScript + DOM/BOM + CSS + (X)HTML = DHTML</li><br>
+							<li>JavaScript code in (X)HTML pages can be executed “on the fly” as the document is rendered (i.e. code outside of functions executes as the script element is encountered); in most cases though, JavaScript code is executed in response to 
+							document events (e.g. clicking a page</li><br>
+							<li>Basic language features:</li><br>
+							<li>
+								<ul>
+								<li>Paradigm:</li>
+									<li>
+										<ul>
+									<li>Object-oriented (prototype-based), functional, imperative scripting language</li>
+										</ul>								
+									</li><br>
+								<li>Java-/C-like synta</li>
+								
+										<li><ul>
+									<li>Implicit semicolon insertion for statement termination</li>
+										<li>Identifiers are alphanumeric, _, and $ characters</li>
+										<li>Single-line (//) or block (/**/) comments</li>
+						
+										</ul>
+								</li><br>
+									
+								
+								<li>Type system and variable scoping rules:</li>
+									<li><ul>
+									<li>Dynamic (aka loose or weak) typing</li>
+										<li>Global (aka top-level) or local scopes</li>
+										<li>Data types:</li>
+											<li>
+											<ul>
+											<li>Primitive types<li>
+											 <li>
+											 <ul>
+											 <li>Numbers (decimal, hexadecimal notation)</li>
+											 <li>Booleans (true, false)</li>
+											 <li>Strings (Single or Double quote delimited)</li>
+											 <li>Undefined and Null</li>
+											 </ul></li>
+											 
+											 <li>Composite (object) types<li>
+											 <li>
+											 <ul>
+											 <li>Core JavaScript Objects</li>
+											 <li>
+												<ul>
+												<li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
+												<li>Arrays (Array)</li>
+												<li>Functions (Function, Arguments)</li>
+												
+												</ul>
+												
+												
+												</li>
+											 </ul></li>
+											 <li>DOM Objects</li>
+											  <li>
+												<ul>
+												<li>Anchor, Applet, Attr, Comment, DOMException, DOMImplementation, DocumentFragment, Element, Event, Form, Image, Input, Layer, Link, Node, Option, Select, Style, Text, TextArea</li>
+												
+												
+												</ul>
+												<li>Keywords</li>
+												<li>
+												<ul> 
+													<li>break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, thi
+													s, throw, try, typeof, var, void, with</li>
+												</ul></li>
+												<li>Reserved words (currently unused)</li>
+												<li>
+												<ul> 
+													<li>abstract, Boolean, byte, char, class, const, debugger, float</li>
+												</ul></li>
+												<li>Statements and control structures</li>
+												<li>
+												<ul> 
+													<li>var</li>
+														
+													<li>if-else</li>
+												
+													<li>switch-case-default-break</li>
+													<li>while, do-while, for, for-in, break, continue</li>
+													<li>try-catch-finally, throw</li>
+													<li>function, return</li>
+												</ul></li>
+												</li>
+											 
+			
+											</ul>     </li>
+											
+										</ul>
+								</li>								
+								</ul>
+								
+							</li>
+							
+						</ul>
+						<br><br>
+						<h3>Asynchronous JavaScript and XML (AJAX)</h3>
+						<ul>
+							<li>
+						Recommended for few small requests. JavaScript will not continue to execute, until the server response is ready. If the server is busy or slow, the application will hang or stop.
+						
+							</li><br>
+						
+						
+						<li>Asynchronous Request</li>
+						</ul>
+						<p>o JavaScript does not have to wait for the server response. It can execute other scripts while waiting for server response, and deal with the response when the response is ready.</p><br>
+						
+						<ul> 
+						<li>Three important properties of the XMLHttpRequest Object</li>
+						
+						</ul>
+						<p>onreadystatechange</p><br>
+						<p>readyState:<br> 0 : request not initialized<br>
+											<br>1 : server connection established
+											<br>2 : request received
+											<br>3 : processing request
+											<br> 4 : request finished and response is ready</p><br>
+						<p></p><br>
+						
+						
+						
+						<ul>
+						<li>status</li>
+						</ul>
+						
+						<p>200 : OK<br>
+							404 : Not Found</p>
+							
+							
+							
+							<h3>Document Object Model</h3>
+								<ul>
+								<li>Document Object Collection</li>
+									<li>
+										<ul>
+										<li>anchors[]</li>
+										<li>forms[]</li>
+										<li>images[]</li>
+										<li>;links[]</li>
+										</ul>
+								
+									</li>
+								<li>Document Object Properties</li>
+											<li>
+													<ul>
+													<li>cookie</li>
+													<li>documentMode</li>
+													<li>domain</li>
+													<li>lastModified</li>
+													<li>readyState</li>
+													<li>referrer</li>
+													<li>title</li>
+													<li>URL</li>
+													
+													</ul>
+											
+												</li>
+								<li>Document Object Methods</li>
+												<li>
+														<ul>
+														<li>close()</li>
+														<li>getElementById()</li>
+														<li>getElementsByName()</li>
+														<li>getElementsByTagName()</li>
+														<li>open()</li>
+														<li>write()</li>
+														<li>writeln()</li>
+														</ul>
+												
+													</li>
+								
+								</ul>
+								
+								<h3>Java EE</h3>
+								
+								<ul>
+								<li>Java EE is an open, standards-based development and deployment platform for creating distributed, transactional, reliable, secure, multi-tiered, web-based, server-centric,
+								component-based enterprise applications </li>
+								<li>Java EE Application Model </li>
+											<li> 
+													<ul>
+													<li>Java programming language, Java Virtual Machine (JVM) </li>
+													<li>Java EE Components </li>
+													<li>Java EE Containers </li>
+													<li>Java EE Server</li>
+
+													</ul> 
+											</li>
+								<li> Java EE Web Application</li>
+								<li> 
+										<ul>
+										<li>Collection of resources installed under a specific subset of the URL namespace of a web application server compliant with the Java EE Specification (e.g. Apache‟s Tomcat, Apache‟s Geronimo, Sun Microsystems‟
+										Glassfish, IBM‟s WebSphere, etc.)</li>
+											<li>Resources</li>
+												<li><ul>
+										<li>Static resources: web pages, images, stylesheets, etc. (serves as is)</li>
+											<li>Dynamic resources: servlets, JSPs</li>
+												<li>Miscellaneous resources: business object classes (e.g. Java Beans, EJB), support libraries, etc.</li>
+													
+										</ul></li>
+													<li>XML-formatted descriptor and configuration files</li>
+														<li>Organized into a standard hierarchical structure and typically packaged and deployed as WAR or EAR files</li>
+															
+										</ul>
+									</li>
+								<li> Java EE APIs</li>
+									<li> 
+										<ul>
+										<li>o Enterprise JavaBeans Technology</li>
+											<li>Java Servlet Technology</li>
+												<li>Java Server Pages</li>
+													<li>Java Server Pages Standard Tag Library</li>
+														<li>Java Server Faces</li>
+															<li>Java Msg Service API</li>
+																<li>Java Transaction API</li>
+																	<li>JavaMail API</li>
+																		<li>JavaBeans Activation Framework</li>
+																			<li>Java API for XML Processing</li>
+										</ul>
+									</li>
+								
+								</ul>
+                        </div>
+
+                        <br>
+                        <br>
+                    </div>
+
+                </body>
+
+                </html>
+                 
+    
